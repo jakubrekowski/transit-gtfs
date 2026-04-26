@@ -128,5 +128,3 @@ function generateLLMsTxt() {
 }
 
 generateLLMsTxt();
-
-
