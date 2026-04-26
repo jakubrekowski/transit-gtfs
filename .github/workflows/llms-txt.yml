@@ -1,0 +1,40 @@
+name: Build and Update llms.txt
+
+on:
+  push:
+    branches:
+      - master # Using master as seen in README.md links
+    paths:
+      - '**/*.md'
+      - 'scripts/build-llms-txt.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate llms.txt
+        run: node scripts/build-llms-txt.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add llms.txt
+          if git diff --staged --quiet; then
+            echo "No changes to llms.txt"
+          else
+            git commit -m "docs: update llms.txt [skip ci]"
+            git push
+          fi
