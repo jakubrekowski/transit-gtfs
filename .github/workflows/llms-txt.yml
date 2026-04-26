@@ -6,7 +6,9 @@ on:
       - master # Using master as seen in README.md links
     paths:
       - '**/*.md'
+      - '**/*.proto'
       - 'scripts/build-llms-txt.js'
+
   workflow_dispatch:
 
 permissions:
@@ -31,10 +33,11 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add llms.txt
+          git add llms.txt llms-full.txt
           if git diff --staged --quiet; then
-            echo "No changes to llms.txt"
+            echo "No changes to llms.txt or llms-full.txt"
           else
-            git commit -m "docs: update llms.txt [skip ci]"
+            git commit -m "docs: update llms files [skip ci]"
             git push
           fi
+

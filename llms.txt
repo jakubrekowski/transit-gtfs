@@ -2,14 +2,20 @@
 > The General Transit Feed Specification (GTFS) is an [Open Standard](https://www.interoperablemobility.org/definitions/#open_standard) used to distribute relevant information about transit systems to riders. It allows public transit agencies to publish their transit data in a format that can be consumed by a wide variety of software applications. Today, the GTFS data format is used by thousands of public transport providers. GTFS consists of two formats: GTFS Schedule and GTFS Realtime.
 
 ## Core Documentation
-- [Main README](README.md): Overview of the GTFS specification.
-- [Contributing](CONTRIBUTING.md): Guidelines for contributing to the project.
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [README.md](README.md)
 
 ## GTFS Schedule
-- [GTFS Schedule Overview](gtfs/README.md)
-- [best-practices](gtfs/best-practices/README.md)
+- [gtfs/README.md](gtfs/README.md)
+- [gtfs/best-practices/README.md](gtfs/best-practices/README.md)
+- [gtfs/spec/en/README.md](gtfs/spec/en/README.md)
+- [gtfs/spec/en/examples/README.md](gtfs/spec/en/examples/README.md)
 
 ## GTFS Realtime
-- [GTFS Realtime Overview](gtfs-realtime/README.md)
-- [best-practices](gtfs-realtime/best-practices/README.md)
+- [gtfs-realtime/README.md](gtfs-realtime/README.md)
+- [gtfs-realtime/best-practices/README.md](gtfs-realtime/best-practices/README.md)
+- [gtfs-realtime/spec/en/README.md](gtfs-realtime/spec/en/README.md)
+- [gtfs-realtime/spec/en/examples/README.md](gtfs-realtime/spec/en/examples/README.md)
+- [gtfs-realtime/spec/en/images/README.md](gtfs-realtime/spec/en/images/README.md)
+- [Protobuf Definitions](gtfs-realtime/proto/gtfs-realtime.proto)
 
